@@ -1,0 +1,52 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block styles %}
+{{ super() }}
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='css/main.css')}}">
+{% endblock %}
+
+
+{% block title %}
+The Economy in Your County
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+	<div class="row">
+		<div class="col-12 pb-3">
+			<h1 class="text-center mt-5">Florida's Economy Has Taken a Great Hit!</h1>
+		</div>
+	</div>
+
+		<div class="row">
+			<div class="col-lg-6 pt-3">
+				<h3 class="indexinfo">Each county has been affected by COVID-19 in varying degrees. Your mission is to stay informed. </h3>
+				<h4 class="indexinfo"> Select your county to view the unemployment level, average gas price and the 2018 median household income. </h4>
+			</div>
+
+			<div class=" col-lg-6 pt-4">
+				<div class="bg-secondary rounded text-white p-4">
+
+		<!-- add some goodies to the form - for help, see
+		     https://pythonhosted.org/Flask-Bootstrap/forms.html
+			 -->
+	       {{ wtf.quick_form(form, action=url_for("county_detail"), method="post") }}
+
+		   </div>
+	    </div>
+		</div>
+
+<div class="row">
+	<div class= "col-12 pt-4 text-center text-white">
+	<p>This project was created by Dana Bryan. The Github repo can be found <a href="xxx"class="text-info">here</a>. The text animations were inspired by an <a href="https://www.codesdope.com/blog/article/creating-typewriter-text-animation-using-css/"class="text-info">article</a> by Aakhya Singh.</p>
+</div>
+</div>
+
+
+
+{% endblock %}

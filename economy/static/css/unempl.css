@@ -1,0 +1,19 @@
+body {
+  background: #404742;
+}
+
+h1 {
+    font-family: "Anonymous Pro", Arial, sans-serif;
+    color: #b5e853;
+    text-shadow: 2px 2px 4px #b5e853;
+}
+p {
+  color: #dbf7a6;
+}
+#carouselExampleIndicators{
+  max-width: 500px;
+}
+
+h5 {
+  color: #f7f763;
+}
