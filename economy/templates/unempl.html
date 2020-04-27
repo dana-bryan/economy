@@ -29,7 +29,7 @@
 	<div class="row pt-1 text-white">
 		<div class="col-lg-6 pt-2">
 			<div class="display-4">A Brief Description: </div>
-			<p class="pt-2">{{ the_county.name }} County has a population of <a href="https://www.florida-demographics.com/counties_by_population" class="text-info">{{ the_county.pop }} people </a>, and its labor force has <a href="http://www.floridajobs.org/workforce-statistics/data-center/statistical-programs/local-area-unemployment-statistics" class="text-info">{{ the_county.laborforce }} people </a>. {{ the_county.name }} is <a href="https://www.fl-counties.com/county-population-and-general-information"class="text-info">{{ the_county.squaremilessize }} square miles </a>. The county seat or the governmental center of the county is <a href="https://www.fl-counties.com/county-population-and-general-information" class="text-info">{{ the_county.countyseat }}</a>. The sources of the information listed are linked.
+			<p class="pt-2">{{ the_county.name }} County has a population of <a href="https://www.florida-demographics.com/counties_by_population" class="text-info">{{ the_county_pop }} people </a>, and its labor force has <a href="http://www.floridajobs.org/workforce-statistics/data-center/statistical-programs/local-area-unemployment-statistics" class="text-info">{{ the_county_laborforce }} people </a>. {{ the_county.name }} is <a href="https://www.fl-counties.com/county-population-and-general-information"class="text-info">{{ the_county_squaremilessize }} square miles </a>. The county seat or the governmental center of the county is <a href="https://www.fl-counties.com/county-population-and-general-information" class="text-info">{{ the_county.countyseat }}</a>. The sources of the information listed are linked.
 		</div>
 
 		<div class="col-lg-6 pt-2">
@@ -46,8 +46,8 @@
 		</div>
 
 		<div class="col-lg-6 pt-2">
-			<div class="number display-4"> ${{ the_county.medianincome2018 }} </div>
-				<p class="pt-2"> The average median household income in 2018 in {{ the_county.name }} is ${{ the_county.medianincome2018 }}. This information was taken from <a href="http://www.flhealthcharts.com/charts/OtherIndicators/NonVitalIndRateOnlyDataViewer.aspx?cid=0293"class="text-info"> Florida Health Charts</a>, which is provided by the Florida Department of Health, Division of Public Health Statistics and Performance Management.</p>
+			<div class="number display-4"> ${{ the_county_medianincome2018 }} </div>
+				<p class="pt-2"> The average median household income in 2018 in {{ the_county.name }} was ${{ the_county_medianincome2018 }}. This information was taken from <a href="http://www.flhealthcharts.com/charts/OtherIndicators/NonVitalIndRateOnlyDataViewer.aspx?cid=0293"class="text-info"> Florida Health Charts</a>, which is provided by the Florida Department of Health, Division of Public Health Statistics and Performance Management.</p>
 		</div>
 
 	</div>
@@ -122,7 +122,7 @@
 <!-- Footer -->
 <footer class="page-footer font-small text-warning">
 
-  <div class="footer text-center py-3">This project was created by Dana Bryan. The Github repo can be found <a href="xxx"class="text-info">here</a>.
+  <div class="footer text-center py-3">This project was created by Dana Bryan. The Github repo can be found <a href="https://github.com/dana-bryan/economy"class="text-info">here</a>.
   </div>
 
 </footer>
