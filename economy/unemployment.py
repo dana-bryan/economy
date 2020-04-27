@@ -75,7 +75,14 @@ def county_detail():
     # get all columns for the one sock with the supplied id
     the_county = Unempl.query.filter_by(id=county_id).first()
     # pass them to the template
-    return render_template('unempl.html', the_county=the_county)
+    #add commas
+    the_county_laborforce = '{:,}'.format(the_county.laborforce)
+    the_county_medianincome2018 = '{:,}'.format(the_county.medianincome2018)
+    the_county_pop = '{:,}'.format(the_county.pop)
+    the_county_squaremilessize = '{:,}'.format(the_county.squaremilessize)
+
+    return render_template('unempl.html', the_county=the_county, the_county_laborforce=the_county_laborforce, the_county_medianincome2018=the_county_medianincome2018, the_county_pop=the_county_pop, the_county_squaremilessize=the_county_squaremilessize)
+
 
 
 if __name__ == '__main__':
